@@ -1,0 +1,21 @@
+kind: pipeline
+name: default
+
+workspace:
+  base: /go
+  path: src/github.com/is2ei/drone-typetalk-test
+
+steps:
+- name: test
+  image: golang
+  commands:
+  - go test ./...
+
+steps:
+- name: typetalk
+  image: is2ei/drone-typetalk
+  settings:
+    typetalk_token:
+      from_secret: typetalk_token
+    topic_id:
+      from_secret: topic_id
