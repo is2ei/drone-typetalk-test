@@ -20,4 +20,4 @@ steps:
     topic_id:
       from_secret: topic_id
     template: >
-      template test
+      DRONE_REPO: {{repo.fullName}}
