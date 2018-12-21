@@ -20,5 +20,5 @@ steps:
     topic_id:
       from_secret: topic_id
     template: >
-     [DRONE_REPO] {{ printf "%s\n" repo.fullName}}
+     [DRONE_REPO] {{repo.fullName}}{{printf "\n"}}
      [DRONE_REPO_OWNER] {{repo.owner}}
