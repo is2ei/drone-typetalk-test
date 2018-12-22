@@ -58,6 +58,24 @@ steps:
 
       [DRONE_GIT_SSH_URL] {{git.SSHURL}}
 
+      ---REPO---
+
+      [DRONE_REPO] {{repo.fullName}}
+
+      [DRONE_REPO_OWNER] {{repo.owner}}
+
+      [DRONE_REPO_NAME] {{repo.name}}
+
+      [DRONE_REPO_BRANCH] {{repo.branch}}
+
+      [DRONE_REPO_LINK] {{repo.link}}
+
+      [DRONE_REPO_NAMESPACE] {{repo.nameSpace}}
+
+      [DRONE_REPO_PRIVATE] {{repo.private}}
+
+      [DRONE_REPO_SCM] {{repo.SCM}}
+
       ```
 ---
 kind: pipeline
