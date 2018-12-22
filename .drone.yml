@@ -22,7 +22,7 @@ steps:
     topic_id:
       from_secret: topic_id
     template: >
-      :wrench: test template :wrench:
+      :wrench: test template all variables :wrench:
 
       ```
 
@@ -41,6 +41,16 @@ steps:
       [DRONE_SYSTEM_HOSTNAME] {{system.hostname}}
 
       [DRONE_SYSTEM_VERSION] {{system.version}}
+
+      ---RUNNER---
+
+      [DRONE_RUNNER_HOST] {{runner.host}}
+
+      [DRONE_RUNNER_HOSTNAME] {{runner.hostname}}
+
+      [DRONE_RUNNER_PLATFORM] {{runner.platform}}
+
+      [DRONE_RUNNER_LABEL] {{runner.label}}
 
       ```
 ---
@@ -68,7 +78,7 @@ steps:
     topic_id:
       from_secret: topic_id
     template_raw: >
-      :wrench: test template_raw :wrench: 
+      :wrench: test template_raw all variables :wrench:
 
       ```
 
