@@ -128,6 +128,10 @@ steps:
 
       [DRONE_COMMIT_REF] {{commit.ref}}
 
+      ---JOB---
+
+      [DRONE_JOB_STARTED] {{job.started}}
+
       ```
 ---
 kind: pipeline
