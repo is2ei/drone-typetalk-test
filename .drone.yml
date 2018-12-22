@@ -160,3 +160,7 @@ steps:
       ---DRONE---
 
       [DRONE] {{drone.isDrone}}
+
+      [DRONE_MACHINE] {{drone.hostname}}
+
+      [DRONE_REMOTE_URL] {{drone.hostname}}
