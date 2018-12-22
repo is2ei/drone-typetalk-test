@@ -24,7 +24,7 @@ steps:
     template_raw: >
       ---DRONE---
 
-      [DRONE] {{.Drone.Drone}}
+      [DRONE] {{.Drone.IsDrone}}
 
       ---GIT---
 
