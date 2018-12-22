@@ -131,7 +131,7 @@ steps:
       [DRONE_JOB_STARTED] {{.Job.Started}}
 
 steps:
-- name: typetalk
+- name: drone_typetalk_template
   image: is2ei/drone-typetalk
   when:
     status: [ success, failure ]
