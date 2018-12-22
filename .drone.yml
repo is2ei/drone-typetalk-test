@@ -28,6 +28,8 @@ steps:
 
       [DRONE_BRANCH] {{.Drone.Branch}}
 
+      [DRONE_MACHINE] {{.Drone.Hostname}}
+
       ---GIT---
 
       [DRONE_GIT_HTTP_URL] {{.Git.HTTPURL}}
@@ -65,6 +67,8 @@ steps:
       [DRONE_BUILD_STATUS] {{.Build.Status}}
 
       [DRONE_BUILD_LINK] {{.Build.Link}}
+
+      [DRONE_PULL_REQUEST] {{.Build.PullRequest}}
 
       --COMMIT---
 
