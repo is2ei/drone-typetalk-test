@@ -54,9 +54,9 @@ steps:
 
       ---GIT---
 
-      [DRONE_GIT_HTTP_URL] {{git.hTTPURL}}
+      [DRONE_GIT_HTTP_URL] {{git.HTTPURL}}
 
-      [DRONE_GIT_SSH_URL] {{git.sSHURL}}
+      [DRONE_GIT_SSH_URL] {{git.SSHURL}}
 
       ```
 ---
