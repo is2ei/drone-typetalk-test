@@ -292,8 +292,14 @@ steps:
     topic_id:
       from_secret: topic_id
     template: >
+      :wrench: test template 001 :wrench:
+
+      ```
+
       {{#success build.status}}
         build {{build.number}} succeeded. Good job.
       {{else}}
         build {{build.number}} failed. Fix me please.
       {{/success}}
+
+      ```
