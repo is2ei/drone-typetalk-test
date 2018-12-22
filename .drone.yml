@@ -269,3 +269,31 @@ steps:
       [DRONE_JOB_STARTED] {{.Job.Started}}
 
       ```
+---
+kind: pipeline
+name: test_template_001
+
+workspace:
+  base: /go
+  path: src/github.com/is2ei/drone-typetalk-test
+
+steps:
+- name: test
+  image: golang
+  commands:
+  - go test ./...
+
+steps:
+- name: typetalk
+  image: is2ei/drone-typetalk
+  settings:
+    typetalk_token:
+      from_secret: typetalk_token
+    topic_id:
+      from_secret: topic_id
+    template: >
+      {{#success build.status}}
+        build {{build.number}} succeeded. Good job.
+      {{else}}
+        build {{build.number}} failed. Fix me please.
+      {{/success}}
