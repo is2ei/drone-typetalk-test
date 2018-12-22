@@ -32,7 +32,7 @@ steps:
 
       [DRONE_MACHINE] {{drone.hostname}}
 
-      [DRONE_REMOTE_URL] {{drone.hostname}}
+      [DRONE_REMOTE_URL] {{drone.remoteURL}}
 
       ---SYSTEM---
 
