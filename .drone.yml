@@ -22,6 +22,8 @@ steps:
     topic_id:
       from_secret: topic_id
     template_raw: >
+      ---DRONE---
+
       ---GIT---
 
       [DRONE_GIT_HTTP_URL] {{.Git.HTTPURL}}
