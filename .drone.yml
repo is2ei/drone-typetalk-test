@@ -129,20 +129,3 @@ steps:
       ---JOB---
 
       [DRONE_JOB_STARTED] {{.Job.Started}}
-
-steps:
-- name: drone_typetalk_template
-  image: is2ei/drone-typetalk
-  when:
-    status: [ success, failure ]
-  settings:
-    typetalk_token:
-      from_secret: typetalk_token
-    topic_id:
-      from_secret: topic_id
-    template: >
-      ===TEMPLATE===
-      
-      ---DRONE---
-
-      [DRONE] {{.drone.isDrone}}
