@@ -15,7 +15,7 @@ steps:
 - name: typetalk
   image: is2ei/drone-typetalk
   when:
-    status: [ failure ]
+    status: [ success, failure ]
   settings:
     typetalk_token:
       from_secret: typetalk_token
