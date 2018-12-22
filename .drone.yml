@@ -82,7 +82,9 @@ steps:
 
       [DRONE_PULL_REQUEST] {{.Build.PullRequest}}
 
-      [DRONE_BRANCH] {{.Build.TargetBranch}}
+      [DRONE_SOURCE_BRANCH] {{.Build.SourceBranch}}
+
+      [DRONE_TARGET_BRANCH] {{.Build.TargetBranch}}
 
       [DRONE_TAG] {{.Build.Tag}}
 
