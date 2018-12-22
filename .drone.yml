@@ -76,6 +76,31 @@ steps:
 
       [DRONE_REPO_SCM] {{repo.SCM}}
 
+      ---BUILD---
+
+      [DRONE_BRANCH] {{build.branch}}
+
+      [DRONE_BUILD_CREATED] {{build.created}}
+
+      [DRONE_BUILD_EVENT] {{build.event}}
+
+      [DRONE_BUILD_NUMBER] {{build.number}}
+
+      [DRONE_BUILD_STARTED] {{build.started}}
+
+      [DRONE_BUILD_STATUS] {{build.status}}
+
+      [DRONE_BUILD_LINK] {{build.link}}
+
+      [DRONE_PULL_REQUEST] {{build.pullRequest}}
+
+      [DRONE_SOURCE_BRANCH] {{build.sourceBranch}}
+
+      [DRONE_TARGET_BRANCH] {{build.targetBranch}}
+
+      [DRONE_TAG] {{build.tag}}
+
+      [DRONE_DEPLOY_TO] {{build.deployTo}}
       ```
 ---
 kind: pipeline
