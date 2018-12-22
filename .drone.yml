@@ -132,7 +132,7 @@ steps:
 
 ---
 kind: pipeline
-name: default
+name: template-test
 
 workspace:
   base: /go
