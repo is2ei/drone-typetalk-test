@@ -22,7 +22,7 @@ steps:
     topic_id:
       from_secret: topic_id
     template: >
-      ===TEMPLATE===
+      :wrench: test template :wrench:
 
       ---DRONE---
 
@@ -65,7 +65,7 @@ steps:
     topic_id:
       from_secret: topic_id
     template_raw: >
-      ===TEMPLATE_RAW===
+      :wrench: test template_raw :wrench: 
 
       ---DRONE---
 
