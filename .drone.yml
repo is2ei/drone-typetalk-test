@@ -26,6 +26,10 @@ steps:
 
       [DRONE_BUILD_STATUS] {{.Build.Status}}
 
+      [DRONE_BUILD_EVENT] {{.Build.Event}}
+
+      [DRONE_BUILD_LINK] {{.Build.Link}}
+
       ---REPO---
 
       [DRONE_REPO] {{.Repo.FullName}}
@@ -36,7 +40,7 @@ steps:
 
       [DRONE_REPO_BRANCH] {{.Repo.Branch}}
 
-      [DRONE_REPO_LINK] {{.Repo.Branch}}
+      [DRONE_REPO_LINK] {{.Repo.Link}}
 
       [DRONE_REPO_NAMESPACE] {{.Repo.NameSpace}}
 
