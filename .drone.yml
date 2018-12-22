@@ -50,3 +50,7 @@ steps:
 
       [DRONE_REPO_SCM] {{.Repo.SCM}}
 
+      --COMMIT---
+
+      [DRONE_COMMIT_SHA] {{.Commit.SHA}}
+
