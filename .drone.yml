@@ -22,16 +22,6 @@ steps:
     topic_id:
       from_secret: topic_id
     template: >
-      ---BUILD---
-
-      [DRONE_BUILD_NUMBER] {{.Build.Number}}
-
-      [DRONE_BUILD_STATUS] {{.Build.Status}}
-
-      [DRONE_BUILD_EVENT] {{.Build.Event}}
-
-      [DRONE_BUILD_LINK] {{.Build.Link}}
-
       ---REPO---
 
       [DRONE_REPO] {{.Repo.FullName}}
@@ -49,6 +39,16 @@ steps:
       [DRONE_REPO_PRIVATE] {{.Repo.Private}}
 
       [DRONE_REPO_SCM] {{.Repo.SCM}}
+
+      ---BUILD---
+
+      [DRONE_BUILD_NUMBER] {{.Build.Number}}
+
+      [DRONE_BUILD_STATUS] {{.Build.Status}}
+
+      [DRONE_BUILD_EVENT] {{.Build.Event}}
+
+      [DRONE_BUILD_LINK] {{.Build.Link}}
 
       --COMMIT---
 
