@@ -40,7 +40,7 @@ steps:
 
       [DRONE_RUNNER_PLATFORM] {{.Runner.Platform}}
 
-      [DRONE_RUNNER_LABEL] {{Runner.Label}}
+      [DRONE_RUNNER_LABEL] {{.Runner.Label}}
 
       ---GIT---
 
