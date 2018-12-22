@@ -52,6 +52,12 @@ steps:
 
       [DRONE_RUNNER_LABEL] {{runner.label}}
 
+      ---GIT---
+
+      [DRONE_GIT_HTTP_URL] {{git.hTTPURL}}
+
+      [DRONE_GIT_SSH_URL] {{git.sSHURL}}
+
       ```
 ---
 kind: pipeline
