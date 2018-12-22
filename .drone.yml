@@ -164,3 +164,11 @@ steps:
       [DRONE_MACHINE] {{drone.hostname}}
 
       [DRONE_REMOTE_URL] {{drone.hostname}}
+
+      ---SYSTEM---
+
+      [DRONE_SYSTEM_HOST] {{system.host}}
+
+      [DRONE_SYSTEM_HOSTNAME] {{system.hostname}}
+
+      [DRONE_SYSTEM_VERSION] {{system.version}}
