@@ -158,3 +158,5 @@ steps:
       ===TEMPLATE===
 
       ---DRONE---
+
+      [DRONE] {{drone.isDrone}}
