@@ -101,6 +101,33 @@ steps:
       [DRONE_TAG] {{build.tag}}
 
       [DRONE_DEPLOY_TO] {{build.deployTo}}
+
+      --COMMIT---
+
+      [DRONE_COMMIT] {{commit.commit}}
+
+      [DRONE_COMMIT_MESSAGE] {{commit.message}}
+
+      [DRONE_COMMIT_AFTER] {{commit.after}}
+
+      [DRONE_COMMIT_AUTHOR] {{commit.author}}
+
+      [DRONE_COMMIT_AUTHOR_AVATAR] {{commit.authorAvatar}}
+
+      [DRONE_COMMIT_AUTHOR_EMAIL] {{commit.authorEmail}}
+
+      [DRONE_COMMIT_AUTHOR_NAME] {{commit.authorName}}
+
+      [DRONE_COMMIT_BEFORE] {{commit.before}}
+
+      [DRONE_COMMIT_BRANCH] {{commit.branch}}
+
+      [DRONE_COMMIT_LINK] {{commit.link}}
+
+      [DRONE_COMMIT_SHA] {{commit.SHA}}
+
+      [DRONE_COMMIT_REF] {{commit.ref}}
+
       ```
 ---
 kind: pipeline
