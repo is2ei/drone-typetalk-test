@@ -21,7 +21,7 @@ steps:
       from_secret: typetalk_token
     topic_id:
       from_secret: topic_id
-    template: >
+    template_raw: >
       ---REPO---
 
       [DRONE_REPO] {{.Repo.FullName}}
