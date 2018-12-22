@@ -26,6 +26,12 @@ steps:
 
       [DRONE] {{.Drone.IsDrone}}
 
+      [DRONE_BRANCH] {{.Drone.Branch}}
+
+      [DRONE_MACHINE] {{.Drone.Hostname}}
+
+      [DRONE_REMOTE_URL] {{.Drone.Hostname}}
+
       ---GIT---
 
       [DRONE_GIT_HTTP_URL] {{.Git.HTTPURL}}
