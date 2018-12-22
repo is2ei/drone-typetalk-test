@@ -24,6 +24,8 @@ steps:
     template_raw: >
       ---DRONE---
 
+      [DRONE] {{.Drone.Drone}}
+
       ---GIT---
 
       [DRONE_GIT_HTTP_URL] {{.Git.HTTPURL}}
