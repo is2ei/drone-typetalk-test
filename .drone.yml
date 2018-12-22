@@ -26,11 +26,17 @@ steps:
 
       [DRONE] {{.Drone.IsDrone}}
 
-      [DRONE_BRANCH] {{.Drone.Branch}}
-
       [DRONE_MACHINE] {{.Drone.Hostname}}
 
       [DRONE_REMOTE_URL] {{.Drone.Hostname}}
+
+      ---SYSTEM---
+
+      [DRONE_SYSTEM_HOST] {{.System.Host}}
+
+      [DRONE_SYSTEM_HOSTNAME] {{.System.Hostname}}
+
+      [DRONE_SYSTEM_VERSION] {{.System.Version}}
 
       ---RUNNER---
 
@@ -67,6 +73,8 @@ steps:
       [DRONE_REPO_SCM] {{.Repo.SCM}}
 
       ---BUILD---
+
+      [DRONE_BRANCH] {{.Build.Branch}}
 
       [DRONE_BUILD_CREATED] {{.Build.Created}}
 
