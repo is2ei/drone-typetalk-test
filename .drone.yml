@@ -32,6 +32,16 @@ steps:
 
       [DRONE_REMOTE_URL] {{.Drone.Hostname}}
 
+      ---RUNNER---
+
+      [DRONE_RUNNER_HOST] {{.Runner.Host}}
+
+      [DRONE_RUNNER_HOSTNAME] {{.Runner.Hostname}}
+
+      [DRONE_RUNNER_PLATFORM] {{.Runner.Platform}}
+
+      [DRONE_RUNNER_LABEL] {{Runner.Label}}
+
       ---GIT---
 
       [DRONE_GIT_HTTP_URL] {{.Git.HTTPURL}}
@@ -71,6 +81,10 @@ steps:
       [DRONE_BUILD_LINK] {{.Build.Link}}
 
       [DRONE_PULL_REQUEST] {{.Build.PullRequest}}
+
+      [DRONE_BRANCH] {{.Build.TargetBranch}}
+
+      [DRONE_TAG] {{.Build.Tag}}
 
       --COMMIT---
 
