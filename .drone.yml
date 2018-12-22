@@ -42,11 +42,15 @@ steps:
 
       ---BUILD---
 
-      [DRONE_BUILD_NUMBER] {{.Build.Number}}
-
-      [DRONE_BUILD_STATUS] {{.Build.Status}}
+      [DRONE_BUILD_CREATED] {{.Build.Created}}
 
       [DRONE_BUILD_EVENT] {{.Build.Event}}
+
+      [DRONE_BUILD_NUMBER] {{.Build.Number}}
+
+      [DRONE_BUILD_STARTED] {{.Build.Started}}
+
+      [DRONE_BUILD_STATUS] {{.Build.Status}}
 
       [DRONE_BUILD_LINK] {{.Build.Link}}
 
