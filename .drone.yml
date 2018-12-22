@@ -20,6 +20,8 @@ steps:
     topic_id:
       from_secret: topic_id
     template: >
+      [DRONE_BUILD_NUMBER] {{.Build.Number}}
+
       [DRONE_REPO] {{.Repo.FullName}}
 
       [DRONE_REPO_OWNER] {{.Repo.Owner}}
