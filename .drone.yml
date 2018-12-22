@@ -14,6 +14,8 @@ steps:
 steps:
 - name: typetalk
   image: is2ei/drone-typetalk
+  when:
+    status: [ failure ]
   settings:
     typetalk_token:
       from_secret: typetalk_token
@@ -47,3 +49,4 @@ steps:
       [DRONE_REPO_PRIVATE] {{.Repo.Private}}
 
       [DRONE_REPO_SCM] {{.Repo.SCM}}
+
