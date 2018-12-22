@@ -96,6 +96,8 @@ steps:
 
       [DRONE_TAG] {{.Build.Tag}}
 
+      [DRONE_DEPLOY_TO] {{.Build.DeployTo}}
+
       --COMMIT---
 
       [DRONE_COMMIT] {{.Commit.Commit}}
@@ -121,3 +123,7 @@ steps:
       [DRONE_COMMIT_SHA] {{.Commit.SHA}}
 
       [DRONE_COMMIT_REF] {{.Commit.Ref}}
+
+      ---JOB---
+
+      [DRONE_JOB_STARTED] {{.Job.Started}}
