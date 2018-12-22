@@ -1,5 +1,48 @@
 kind: pipeline
-name: default
+name: test_template
+
+workspace:
+  base: /go
+  path: src/github.com/is2ei/drone-typetalk-test
+
+steps:
+- name: test
+  image: golang
+  commands:
+  - go test ./...
+
+steps:
+- name: typetalk
+  image: is2ei/drone-typetalk
+  when:
+    status: [ success, failure ]
+  settings:
+    typetalk_token:
+      from_secret: typetalk_token
+    topic_id:
+      from_secret: topic_id
+    template: >
+      ===TEMPLATE===
+
+      ---DRONE---
+
+      [DRONE] {{drone.isDrone}}
+
+      [DRONE_MACHINE] {{drone.hostname}}
+
+      [DRONE_REMOTE_URL] {{drone.hostname}}
+
+      ---SYSTEM---
+
+      [DRONE_SYSTEM_HOST] {{system.host}}
+
+      [DRONE_SYSTEM_HOSTNAME] {{system.hostname}}
+
+      [DRONE_SYSTEM_VERSION] {{system.version}}
+
+---
+kind: pipeline
+name: test_template_raw
 
 workspace:
   base: /go
@@ -129,46 +172,3 @@ steps:
       ---JOB---
 
       [DRONE_JOB_STARTED] {{.Job.Started}}
-
----
-kind: pipeline
-name: template-test
-
-workspace:
-  base: /go
-  path: src/github.com/is2ei/drone-typetalk-test
-
-steps:
-- name: test
-  image: golang
-  commands:
-  - go test ./...
-
-steps:
-- name: typetalk
-  image: is2ei/drone-typetalk
-  when:
-    status: [ success, failure ]
-  settings:
-    typetalk_token:
-      from_secret: typetalk_token
-    topic_id:
-      from_secret: topic_id
-    template: >
-      ===TEMPLATE===
-
-      ---DRONE---
-
-      [DRONE] {{drone.isDrone}}
-
-      [DRONE_MACHINE] {{drone.hostname}}
-
-      [DRONE_REMOTE_URL] {{drone.hostname}}
-
-      ---SYSTEM---
-
-      [DRONE_SYSTEM_HOST] {{system.host}}
-
-      [DRONE_SYSTEM_HOSTNAME] {{system.hostname}}
-
-      [DRONE_SYSTEM_VERSION] {{system.version}}
